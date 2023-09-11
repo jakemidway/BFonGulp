@@ -1,0 +1,11 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.registration{
+    padding: rem(68) 0 rem(100);
+   
+    &__modal{
+        background-color: $whiteColor;
+        min-height: rem(840);
+        padding: rem(80) 0;
+    }
+}
