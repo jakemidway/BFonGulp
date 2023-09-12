@@ -9,10 +9,40 @@
     <div class="registration">
       <div class="registration__container">
         <div class="registration__modal">
-          <form class="registration__form" action=”” method=”post”>
-            <h2>Войти</h2>
-            <input type="text" placeholder="Электронная почта" name="email" required>
-            <input type="password" placeholder="Пароль" name="psw" required>
+          <form class="registration__form" action="" method="post">
+            <h2>Регистрация</h2>
+            <p>Заполните поля (обязательные поля отмечены знаком*)</p>
+            <div>
+              <label for="email" hidden>Почта:</label>
+              <input type="email" id="email" name="email" placeholder="Электронная почта *" required>
+            </div>
+            <div>
+              <label for="password" hidden>Пароль:</label>
+              <input type="password" id="password" name="password" placeholder="Пароль *" required>
+            </div>
+            <div>
+              <label for="confirm-password" hidden>Повторите пароль:</label>
+              <input type="password" id="confirm-password" name="confirm-password" placeholder="Повторите пароль *" required>
+            </div>
+            <div>
+              <label for="first-name" hidden>Имя:</label>
+              <input type="text" id="first-name" name="first-name" placeholder="Имя" required>
+            </div>
+            <div>
+              <label for="last-name" hidden>Фамилия:</label>
+              <input type="text" id="last-name" name="last-name" placeholder="Фамилия" required>
+            </div>
+            <div>
+              <label for="middle-name" hidden>Отчество:</label>
+              <input type="text" id="middle-name" name="middle-name" placeholder="Отчество">
+            </div>
+            <div>
+              <label for="phone" hidden>Телефон:</label>
+              <input type="tel" id="phone" name="phone" placeholder="Телефон">
+            </div>
+            <div>
+              <button type="submit">Зарегистрироваться</button>
+            </div>
           </form>  
 
         </div>
