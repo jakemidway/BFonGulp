@@ -75,9 +75,21 @@ body {
 h2 {
   font-size: rem(48);
   font-style: normal;
-  font-style: normal;
   font-weight: 600;
   line-height: normal;
   margin-bottom: rem(32);
 }
 
+input{
+  color: $grayColor;
+  font-size: rem(18);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: rem(550);
+  height: rem(52);
+  padding: 0 rem(24);
+  border-radius: rem(10);
+  border: rem(1) solid $grayColor;
+  background: $whiteColor;
+}
