@@ -1,4 +1,12 @@
 // Заголовки, общие БЄМ блоки и проче...
+.button{
+    width: rem(550);
+    height: rem(60);
+    background-color: $blueColor;
+    color: $whiteColor;
+    border-radius: 10px;
+    font-size: rem(24);
+}
 
 .registration{
     padding: rem(68) 0 rem(100);
