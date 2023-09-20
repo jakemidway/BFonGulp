@@ -17,12 +17,25 @@
         padding: rem(80) 0;
     }
     &__form{
-        padding: 0 rem(52);
+        width: rem(550);
+        margin-left: rem(52);
+        input {
+            height: rem(52);
+            width: 100%;
+            padding: rem(16);
+            margin-bottom: rem(16);
+        }
+        button{
+            margin-top: rem(32);
+        }
     }
     &__description{
         padding-bottom: rem(24);
     }
-    & input{
-        margin-bottom: rem(16);
+    &__name{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: rem(16);
     }
+    
 }
