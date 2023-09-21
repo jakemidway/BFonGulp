@@ -1,0 +1,22 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/exlab    # schema barrierfree
+    username: postgres
+    password: postgres
+  data:
+    redis:
+      url: http://localhost:8080/users/login/mail_confirm
+  mail:
+    default-encoding: UTF-8
+    host: smtp.mail.ru
+    port: 465
+    username: mikulichmail@mail.ru
+    password: fGhyiCv6jmNH2UqwPL5G
+    test-connection: true
+    protocol: smtps
