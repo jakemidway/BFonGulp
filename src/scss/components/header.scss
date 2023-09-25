@@ -5,80 +5,58 @@
   background: $blueColor;
   color: $whiteColor;
 
-  .header-is-sticky & {
-    // ..стили для липкого хедера
-    position: fixed;
-    background-color: #007aff;
+
+
+  a{
+    color: $whiteColor
   }
 
-  // .header__container
+  &__hiddenTitle{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  &__title{
+    display: flex;
+    align-items: baseline;
+    &::before{
+      display: block;
+      content: ' ';
+      background-image: url(../images/logo.png) ;
+      height: rem(44.5);
+      width: rem(32);
+    }
+
+  }
+  
+
+  &__link{
+    color: $whiteColor;
+    font-family: 'Montserrat', sans-serif;
+    font-size: rem(30);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: rem(0.6);
+  }
+  
   &__container {
     min-height: rem($headerHeight);
     display: flex;
     align-items: center;
-
-    .header-is-sticky & {
-      height: rem($headerHeight - 50);
-    }
+    justify-content: space-between;
   }
-
-  a {
-    color: $whiteColor;
+  &__widgets{
+    display: flex;
+    
   }
-}
-
-// Burger
-/*
-.icon-menu {
-  display: none;
-
-  @include mediaMx(768) {
-    display: block;
-    position: relative;
-    width: rem(30);
-    height: rem(18);
-    cursor: pointer;
-    z-index: 5;
-
-    span,
-    &::before,
-    &::after {
-      content: "";
-      transition: all 300ms ease 0ms;
-      right: 0;
-      position: absolute;
-      width: 100%;
-      height: rem(2);
-      background-color: #000;
-    }
-
-    &::before {
-      top: 0;
-    }
-
-    &::after {
-      bottom: 0;
-    }
-
-    span {
-      top: calc(50% - rem(1));
-    }
-
-    .menu-open & {
-      span {
-        width: 0;
-      }
-
-      &::before {
-        top: calc(50% - rem(1));
-        transform: rotate(-45deg);
-      }
-
-      &::after {
-        bottom: calc(50% - rem(1));
-        transform: rotate(45deg);
-      }
-    }
+  &__widget{
+    min-height: rem(62);
+    min-width: rem(106);
+    background-color: $whiteColor;
+    border-radius: rem(10);
+    margin-left: rem(12);
   }
 }
-*/
+
