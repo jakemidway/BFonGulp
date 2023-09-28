@@ -1,6 +1,6 @@
 .header {
+  // transition: all 0.3s ease-in-out;
   width: 100%;
-  transition: all 0.3s ease-in-out;
   z-index: 50;
   
   a{
@@ -8,19 +8,19 @@
   }
 
   &__hiddenTitle{
+    visibility: hidden;
     width: 0;
     height: 0;
-    visibility: hidden;
   }
   &__title{
-    display: flex;
     align-items: baseline;
+    display: flex;
     &::before{
-      display: block;
-      content: ' ';
-      background-image: url(../images/logo.png) ;
+      background-image: url(../images/logo.png);
       height: rem(44.5);
       width: rem(32);
+      display: block;
+      content: ' ';
     }
 
   }
@@ -35,8 +35,8 @@
     align-items: center;
   }
   &__link{
-    color: $whiteColor;
     font-family: 'Montserrat', sans-serif;
+    color: $whiteColor;
     font-size: rem(30);
     font-style: normal;
     font-weight: 600;
@@ -63,13 +63,27 @@
   &__menu-item {
     font-family: 'Poppins', sans-serif; 
     text-transform: uppercase;
+    align-items: center;
     font-size: rem(18);
-    margin-right: 20px;
+    margin-right: rem(72);
     position: relative;
     font-weight: 700;
-    cursor: pointer; 
+    cursor: pointer;
+    display: flex; 
   }
-  &__menu-item:hover &__submenu {
+  &__menu-itemName{
+    align-items: baseline;
+    display: flex;
+    &::after{
+      background: url(../images/bxs_up-arrow.png) no-repeat;
+      margin-left: rem(10);
+      height: rem(16);
+      display: block;
+      width: rem(16);
+      content: ' ';     
+    }
+  }
+  &__menu-item:hover &__submenu{
     display: block;
   }
   &__nav{
@@ -87,23 +101,57 @@
   }
   &__submenu {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;      
-    position: absolute;  
+    padding: rem(32) rem(74) rem(32) rem(32);  
+    background-color: $cristalWhite;      
+    font-family: $mainFont;
+    position: absolute;
+    font-weight: 500;  
     display: none;
     z-index: 1;  
     top: 100%;
-    left: 0;
-         
+    left: 0; 
   }
   &__submenu a {
     transition: background-color 0.2s;
+    margin-bottom: rem(24);
     text-decoration: none;
+    white-space: nowrap;
     display: block;
-    padding: 10px;
     color: #333;
-    &:hover {
-      background-color: #f5f5f5;
+    &:last-child{
+      margin-bottom: 0;
     }
+    &:hover {
+      background-color: $whiteColor;
+    }
+  }
+  &__profileWrapper{
+    display: flex;
+    align-items: center;
+  }
+  &__search{
+    position: relative;
+    overflow: hidden;
+    width: rem(223);
+    display: flex;
+  }
+  &__search-input {
+    width: rem(223);
+    font-weight: 600;
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
+  &__search-button {
+    transform: translateY(-50%);
+    position: relative;
+    height: rem(24);
+    cursor: pointer;
+    width: rem(24);
+    right: rem(36);
+    border: none;
+    padding: 0;
+    top: 50%;
   }
   &__search,
   &__profile{
@@ -111,7 +159,16 @@
     border-radius: rem(10);
     margin-left: rem(33);
     height: rem(48);
-    width: rem(60);
+    
+  }
+  &__profile{
+    width: rem(69);
+  }
+  &__profileLink{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
   }
 }
 

@@ -4,7 +4,7 @@ $maxWidthContainer: 1180; // ширина контейнера с учетом p
 $containerWidth: 1160; // ширина контейнера из макета
 
 $mainOffset: 15; // отступы безопасности для контейнера
-$mainFont: ''; // !указать здесь основное семейство шрифта
+$mainFont: 'Inter', sans-serif; // !указать здесь основное семейство шрифта
 $mainWeight: 400; // !указать здесь основное начертание шрифта
 
 $headerHeight: 94;
@@ -19,6 +19,7 @@ $blueColor: #04378E;
 $redColor: #A04A4A;
 $lightColor: #F2F2F2;
 $yellowColor: #FFE76B;
+$cristalWhite: #fff;
 
 $firstAccentColor: $blackColor;
 $secondAccentColor: $redColor;
